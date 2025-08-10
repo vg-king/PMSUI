@@ -148,9 +148,9 @@ const ProjectDetail = () => {
             <section>
                 <p className="py-5 border-b text-lg -tracking-wider">Tasks</p>
                 <div className="lg:flex md:flex gap-3 justify-between py-5">
-                    <IssueList status="pending" title="Todo List"></IssueList>
-                    <IssueList status="In progreess" title="Todo List"></IssueList>
-                    <IssueList status="done" title="Todo List"></IssueList>
+                    <IssueList status="pending" title="To Do"></IssueList>
+                    <IssueList status="in progress" title="In Progress"></IssueList>
+                    <IssueList status="done" title="Done"></IssueList>
                 </div>
             </section>
           </div>
