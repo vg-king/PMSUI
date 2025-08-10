@@ -64,7 +64,7 @@ const CreateIssueForm = () => {
                   />
                 </FormControl>
                 <FormDescription>
-                  Enter the email of the user you want to invite.
+                  Enter a clear name for this issue.
                 </FormDescription>
                 <FormMessage />
               </FormItem>
