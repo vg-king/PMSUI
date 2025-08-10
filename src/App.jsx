@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import Home from "./Pages/Home/Home"
 import './App.css'
 import Navbar from "./Pages/Navbar/Navbar"
