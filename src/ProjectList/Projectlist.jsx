@@ -111,16 +111,19 @@ const Projectlist = () => {
         </Card>
       </section>
 
-      <section className='projectListSection w-full lg:w-[48rem]'>
+      <section className='project-list-section w-full lg:w-[48rem]'>
         <div className='flex gap-2 items-center pb-5 justify-between'>
-          <div className='relative w-full'>
+          <div className='relative flex-1'>
             <MagnifyingGlassIcon className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4 z-10' />
             <Input
               onChange={handleSearchChange}
-              placeholder="search project"
+              placeholder="Search projects..."
               className="w-full pl-10 pr-4"
             />
           </div>
+          <Button variant="outline" size="icon" className="lg:hidden" aria-label="Open filters">
+            <MixerHorizontalIcon />
+          </Button>
         </div>
        <div className='space-y-5 min-h-[74vh]'>
   {
