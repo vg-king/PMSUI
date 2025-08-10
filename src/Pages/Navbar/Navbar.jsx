@@ -59,15 +59,18 @@ const Navbar = () => {
               variant='outline'
               size='icon'
               className='rounded-full border-2 border-gray-500'
+              aria-label="User menu"
             >
               <PersonIcon />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuItem>Logout</DropdownMenuItem>
+            <DropdownMenuItem role="menuitem">Profile</DropdownMenuItem>
+            <DropdownMenuItem role="menuitem">Settings</DropdownMenuItem>
+            <DropdownMenuItem role="menuitem">Logout</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-        <p>Vishnu</p>
+        <p className="hidden sm:block font-medium">Vishnu</p>
       </div>
     </div>
   );
