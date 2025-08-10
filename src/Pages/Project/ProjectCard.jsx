@@ -14,16 +14,25 @@ import { useNavigate } from 'react-router-dom'
 const ProjectCard = () => {
     const navigate = useNavigate()
     return (
-        <Card className='p-5 w-full lg:max-w-3xl'>
+        <Card className='p-5 w-full lg:max-w-3xl hover:shadow-lg transition-shadow'>
             <div className='space-y-5'>
                 <div className='space-y-2'>
-                    <div className='flex justify-between'>
-                        <div className='flex items-center gap-5'>
-                            <h1 onClick={()=>navigate("/project/3")} className='cursor-pointer font-bold text-lg'>
+                    <div className='flex justify-between items-start'>
+                        <div className='flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-5'>
+                            <h2
+                              onClick={()=>navigate("/project/3")}
+                              className='cursor-pointer font-bold text-lg hover:text-blue-400 transition-colors'
+                              role="button"
+                              tabIndex={0}
+                              onKeyDown={(e) => e.key === 'Enter' && navigate("/project/3")}
+                              aria-label="Open Create Ecommerce Project"
+                            >
                                 Create Ecommerce Project
-                            </h1>
-                            <DotFilledIcon/>
-                            <p className='text-sm text-gray-400'>Full Stack</p>
+                            </h2>
+                            <div className='flex items-center gap-2'>
+                              <DotFilledIcon className="hidden sm:block"/>
+                              <p className='text-sm text-gray-400'>Full Stack</p>
+                            </div>
                         </div>
                         <div>
                             <DropdownMenu>
