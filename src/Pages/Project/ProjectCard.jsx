@@ -36,14 +36,17 @@ const ProjectCard = () => {
                         </div>
                         <div>
                             <DropdownMenu>
-                                <DropdownMenuTrigger className='rounded-full p-2 hover:bg-gray-400 transition-colors'>
+                                <DropdownMenuTrigger
+                                  className='rounded-full p-2 hover:bg-gray-400 transition-colors'
+                                  aria-label="Project options"
+                                >
                                     <DotsVerticalIcon />
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent>
-                                    <DropdownMenuItem>
+                                    <DropdownMenuItem role="menuitem">
                                         Update
                                     </DropdownMenuItem>
-                                    <DropdownMenuItem>
+                                    <DropdownMenuItem role="menuitem">
                                         Delete
                                     </DropdownMenuItem>
                                 </DropdownMenuContent>
