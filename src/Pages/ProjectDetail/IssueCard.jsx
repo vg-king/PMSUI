@@ -11,13 +11,13 @@ import { DotsVerticalIcon, PersonIcon } from '@radix-ui/react-icons';
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import UserList from './UserList';
 
-const IssueCard = () => {
+const IssueCard = ({ title = "Create NavBar", issueId = 1, assignee = "FBP" }) => {
   return (
     <Card className="rounded-xl border border-slate-700 bg-slate-800/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-200 hover:scale-[1.01] p-3">
       {/* Header */}
       <CardHeader className="flex justify-between items-center p-0 pb-3">
         <CardTitle className="text-white text-base font-medium">
-          Create NabVar
+          {title}
         </CardTitle>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
