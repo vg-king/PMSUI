@@ -23,7 +23,16 @@ const Navbar = () => {
   return (
     <div className='border-b py-4 px-5 flex items-center justify-between'>
       <div className='flex items-center gap-3'>
-        <p onClick={()=>navigate("/")} className='cursor-pointer font-bold text-lg'>Project Management</p>
+        <h1
+          onClick={()=>navigate("/")}
+          className='cursor-pointer font-bold text-lg hover:text-gray-300 transition-colors'
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => e.key === 'Enter' && navigate("/")}
+          aria-label="Go to home page"
+        >
+          Project Management
+        </h1>
 
         <Dialog>
           <DialogTrigger asChild>
