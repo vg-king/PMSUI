@@ -12,12 +12,27 @@ import { Button } from "@/components/ui/button";
 import { PlusIcon } from 'lucide-react';
 import CreateIssueForm from './CreateIssueForm';
 
-const IssueList = ({ title }) => {
+const IssueList = ({ title, status }) => {
+  // Sample issues data - in real app this would come from props or API
+  const getIssuesForStatus = (status) => {
+    const allIssues = [
+      { id: 1, title: "Create NavBar", assignee: "FBP", status: "pending" },
+      { id: 2, title: "Setup Authentication", assignee: "DEV", status: "pending" },
+      { id: 3, title: "Database Design", assignee: "FBP", status: "in progress" },
+      { id: 4, title: "API Integration", assignee: "DEV", status: "in progress" },
+      { id: 5, title: "User Dashboard", assignee: "FBP", status: "done" },
+      { id: 6, title: "Testing Setup", assignee: "QA", status: "done" }
+    ];
+    return allIssues.filter(issue => issue.status === status);
+  };
+
+  const issues = getIssuesForStatus(status);
+
   return (
     <div>
       <Dialog>
         <Card className="w-full max-w-[300px] lg:w-[310px] rounded-2xl shadow-lg bg-slate-900/60 backdrop-blur border border-slate-700 flex flex-col">
-          
+
           {/* Header */}
           <CardHeader className="pb-3 border-b border-slate-700">
             <CardTitle className="text-white font-semibold text-lg">{title}</CardTitle>
@@ -25,8 +40,13 @@ const IssueList = ({ title }) => {
 
           {/* Content */}
           <CardContent className="px-3 py-4 space-y-4">
-            {[1, 1, 1].map((_, idx) => (
-              <IssueCard key={idx} />
+            {issues.map((issue) => (
+              <IssueCard
+                key={issue.id}
+                title={issue.title}
+                issueId={issue.id}
+                assignee={issue.assignee}
+              />
             ))}
           </CardContent>
 
