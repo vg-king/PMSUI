@@ -28,7 +28,8 @@ import {
 
 // Validation schema
 const formSchema = z.object({
-  email: z.string().email("Invalid email address"),
+  issueName: z.string().min(2, "Issue name must be at least 2 characters"),
+  description: z.string().min(5, "Description must be at least 5 characters"),
 })
 
 const CreateIssueForm = () => {
