@@ -21,7 +21,7 @@ const IssueCard = ({ title = "Create NavBar", issueId = 1, assignee = "FBP" }) =
         </CardTitle>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button className="rounded-full" size="icon" variant="ghost">
+            <Button className="rounded-full" size="icon" variant="ghost" aria-label="Issue options">
               <DotsVerticalIcon />
             </Button>
           </DropdownMenuTrigger>
