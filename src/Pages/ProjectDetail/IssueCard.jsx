@@ -42,6 +42,7 @@ const IssueCard = ({ title = "Create NavBar", issueId = 1, assignee = "FBP" }) =
             <Button
               size="icon"
               className="bg-slate-700 hover:bg-slate-600 rounded-full p-1 h-8 w-8"
+              aria-label="Assign user to issue"
             >
               <Avatar className="h-7 w-7">
                 <AvatarFallback className="bg-slate-600">
