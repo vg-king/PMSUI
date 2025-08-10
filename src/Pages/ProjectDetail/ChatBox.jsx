@@ -82,14 +82,20 @@ const ChatBox = () => {
             placeholder="Type a message..."
             className="flex-1 border-none focus-visible:ring-0 bg-transparent text-white"
             onKeyDown={(e) => {
-              if (e.key === "Enter") handleSendMessage();
+              if (e.key === "Enter") {
+                e.preventDefault();
+                handleSendMessage();
+              }
             }}
+            aria-label="Type your message"
           />
           <Button
             onClick={handleSendMessage}
             size="icon"
             variant="ghost"
-            className="rounded-full text-blue-400 hover:text-blue-600"
+            className="rounded-full text-blue-400 hover:text-blue-600 disabled:opacity-50"
+            disabled={!message.trim()}
+            aria-label="Send message"
           >
             <PaperPlaneIcon />
           </Button>
