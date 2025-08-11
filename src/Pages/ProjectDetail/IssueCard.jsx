@@ -10,13 +10,15 @@ import { Button } from "@/components/ui/button";
 import { DotsVerticalIcon, PersonIcon } from '@radix-ui/react-icons';
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import UserList from './UserList';
+import { useNavigate } from 'react-router-dom';
 
 const IssueCard = () => {
+  const navigate = useNavigate()
   return (
     <Card className="rounded-xl border border-slate-700 bg-slate-800/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-200 hover:scale-[1.01] p-3">
       {/* Header */}
       <CardHeader className="flex justify-between items-center p-0 pb-3">
-        <CardTitle className="text-white text-base font-medium">
+        <CardTitle onClick = {()=>navigate("/project/3/issue/10")} className="cursor-pointer text-white text-base font-medium">
           Create NabVar
         </CardTitle>
         <DropdownMenu>

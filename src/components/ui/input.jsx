@@ -6,6 +6,7 @@ function Input({
   className,
   type,
   ...props
+  
 }) {
   return (
     <input
