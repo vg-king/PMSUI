@@ -5,11 +5,16 @@ import Navbar from "./Pages/Navbar/Navbar"
 import { Route, Routes } from "react-router-dom"
 import ProjectDetail from "./Pages/ProjectDetail/ProjectDetail"
 import IssueDetatils from "./Pages/Issues/IssueDetatils"
+import Subscription from "./Pages/Subscription/Subscription"
+import Auth from "./Pages/Auth/Auth"
 
 
 function App() {
   return (
     <>
+{
+  false?
+    <div>
 
     <Navbar/>
    
@@ -17,8 +22,12 @@ function App() {
       <Route path="/" element={<Home/>}></Route>
       <Route path="/project/:id" element={<ProjectDetail/>}></Route>
       <Route path="/project/:projectId/issue/:issueId" element={<IssueDetatils/>}></Route>
+      <Route path="/upgrade_plan" element={<Subscription/>}></Route>
       
     </Routes>
+
+    </div>:<Auth/>
+}
     </>
   )
 }

@@ -120,7 +120,7 @@ const IssueDetatils = () => {
 
                                     <Avatar className="h-8 w-8 text-xs">
                                         <AvatarFallback>
-                                            R
+                                            M
                                         </AvatarFallback>
                                     </Avatar>
                                     <p>Raam</p>
